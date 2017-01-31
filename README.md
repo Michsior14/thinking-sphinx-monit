@@ -1,4 +1,4 @@
-# ThinkingSphinx::Capistrano::Monit
+# ThinkingSphinx::Monit
 
 Monit integration with Thinking Sphinx and CapistranoV3
 
@@ -28,7 +28,7 @@ And then execute:
 If you need change config for Monit, you can:
 
 ```
-    bundle exec rails generate thinking_sphinx:capistrano:monit:template
+    bundle exec rails generate thinking_sphinx:monit:template
 
 ```
 and edit template in your config/deploy/templates folder.
