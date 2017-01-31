@@ -29,7 +29,6 @@ If you need change config for Monit, you can:
 
 ```
     bundle exec rails generate thinking_sphinx:monit:template
-
 ```
 and edit template in your config/deploy/templates folder.
 
