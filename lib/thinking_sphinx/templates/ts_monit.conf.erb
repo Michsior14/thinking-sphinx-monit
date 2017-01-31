@@ -1,0 +1,7 @@
+# Monit configuration for Thinking Sphinx
+# Service name: <%= @service_name %>
+#
+check process <%= @service_name %>
+with pidfile "<%= @ts_pid_file %>"
+start program = "/usr/bin/sudo -iu <%= @user %> /bin/bash -c '<%= @searchd %> --pidfile --config <%= @config_path %> --environment <%= @rails_env%>'"
+stop program = "/usr/bin/sudo -iu <%= @user %> /bin/bash -c '<%= @searchd %> --pidfile --config <%= @config_path %> --stopwait --environment <%= @rails_env%>'"

@@ -1,0 +1,1 @@
+require 'thinking_sphinx/railtie' if defined?(Rails::Railtie)
