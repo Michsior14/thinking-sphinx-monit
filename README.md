@@ -1,4 +1,4 @@
-# ThinkingSphinx::Monit
+# ThinkingSphinxMonit
 
 Monit integration with Thinking Sphinx and CapistranoV3
 
