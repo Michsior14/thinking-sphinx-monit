@@ -24,7 +24,7 @@ namespace :thinking_sphinx_monit do
       begin
         sudo_if_needed "#{fetch(:thinking_sphinx_monit_bin)} monitor #{ts_monit_service_name}"
       rescue
-        invoke 'thinking_sphinx:monit:config'
+        invoke 'thinking_sphinx_monit:config'
         sudo_if_needed "#{fetch(:thinking_sphinx_monit_bin)} monitor #{ts_monit_service_name}"
       end
     end

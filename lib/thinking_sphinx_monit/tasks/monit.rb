@@ -1,3 +1,5 @@
+require 'thinking-sphinx'
+
 namespace :ts_monit do
 
   desc 'Generates Thinking Sphinx monit-service'
