@@ -57,7 +57,7 @@ set :thinking_sphinx_monit_bin, '/usr/bin/monit'
 If you need change config for Monit, you can:
 
 ```
-bundle exec rails generate thinking_sphinx:monit:template
+bundle exec rails generate thinking_sphinx_monit:template
 ```
 and edit template in your config/deploy/templates folder.
 
