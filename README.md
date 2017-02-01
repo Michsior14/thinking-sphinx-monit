@@ -15,8 +15,7 @@ And then execute:
 ## Usage
 ```ruby
     # Capfile
-
-    require 'thinking_sphinx/monit/capistrano'
+    require 'thinking_sphinx_monit/capistrano'
 ```
 
 ## Dependencies

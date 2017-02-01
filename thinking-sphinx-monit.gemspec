@@ -1,11 +1,11 @@
 # coding: utf-8
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'thinking_sphinx/version'
+require 'thinking_sphinx_monit/versionversion'
 
 Gem::Specification.new do |spec|
   spec.name = 'thinking-sphinx-monit'
-  spec.version = ThinkingSphinx::Monit::VERSION
+  spec.version = ThinkingSphinxMonit::VERSION
   spec.authors = ['Michal Mrozek']
   spec.email = ['michalmrozek@wp.pl']
   spec.description = spec.summary = %q{Monit integration with Thinking Sphinx and Capistrano}

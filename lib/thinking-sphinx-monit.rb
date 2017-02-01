@@ -1,1 +1,1 @@
-require_relative 'thinking_sphinx/railtie' if defined?(Rails::Railtie)
+require_relative 'thinking_sphinx_monit/railtie' if defined?(Rails::Railtie)
