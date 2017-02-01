@@ -74,6 +74,6 @@ namespace :thinking_sphinx_monit do
     end
   end
 
-  before 'deploy:updating', 'thinking_sphinx_monit:unmonitor'
-  after 'deploy:published', 'thinking_sphinx_monit:monitor'
+  before 'thinking_sphinx:stop', 'thinking_sphinx_monit:unmonitor'
+  after 'thinking_sphinx:start', 'thinking_sphinx_monit:monitor'
 end
