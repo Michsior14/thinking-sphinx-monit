@@ -18,7 +18,12 @@ Add to your capfile following line:
 # Capfile
 require 'thinking_sphinx_monit/capistrano'
 ```
-It's also needed to specify thinking sphinx hooks in your deploy.rb, for example like this:
+Before any other action please first deploy your app to server (needed for all stages which you want to use):
+```ruby
+cap <stage> deploy
+```
+
+Then you can specify thinking sphinx hooks in your deploy.rb, for example like this:
 ```ruby
 before 'deploy:updating', 'thinking_sphinx:stop'
 after 'deploy:published', 'thinking_sphinx:start'
@@ -31,7 +36,7 @@ before 'thinking_sphinx:stop', 'thinking_sphinx_monit:unmonitor'
 after 'thinking_sphinx:start', 'thinking_sphinx_monit:monitor'
 ```
 
-Of course you can do everything manually, but remember to do ```cap <stage> deploy``` before any following tasks (just once per stage):
+Of course you can do everything manually:
 ```ruby
 cap thinking_sphinx_monit:config     # Generates Thinking Sphinx monit-service
 cap thinking_sphinx_monit:monitor    # Monitor Thinking Sphinx monit-service
