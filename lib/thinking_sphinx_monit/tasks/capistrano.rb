@@ -12,7 +12,7 @@ namespace :thinking_sphinx_monit do
     on roles(fetch(:thinking_sphinx_roles)) do |role|
       within current_path do
         with rails_env: fetch(:thinking_sphinx_rails_env) do
-          execute :rake, "ts_monit:config[#{role.user},#{fetch(:thinking_sphinx_use_sudo)},#{fetch(:tmp_dir)},#{fetch(:thinking_sphinx_monit_conf_dir)},#{fetch(:thinking_sphinx_monit_bin)},#{ts_monit_service_name},#{fetch(:rails_env)}]"
+          execute :rake, "ts_monit:config[#{role.user},#{fetch(:thinking_sphinx_use_sudo)},#{fetch(:tmp_dir)},#{fetch(:thinking_sphinx_monit_conf_dir)},#{fetch(:thinking_sphinx_monit_bin)},#{ts_monit_service_name}]"
         end
       end
     end

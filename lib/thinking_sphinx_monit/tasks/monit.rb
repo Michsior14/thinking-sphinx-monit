@@ -3,13 +3,12 @@ require 'thinking-sphinx'
 namespace :ts_monit do
 
   desc 'Generates Thinking Sphinx monit-service'
-  task :config, [:user, :sudo, :tmp_dir, :monit_conf_dir, :monit_bin, :service_name, :env] => [:environment] do |_, args|
+  task :config, [:user, :sudo, :tmp_dir, :monit_conf_dir, :monit_bin, :service_name] => [:environment] do |_, args|
     @searchd = searchd
     @config_path = config.configuration_file
     @ts_pid_file = config.searchd.pid_file
     @user = args.user
     @service_name = args.service_name
-    @rails_env = args.env
     template_sphinx 'ts_monit.conf', "#{args.tmp_dir}/ts_monit.conf"
     sudo_if_needed args.sudo, "mv #{args.tmp_dir}/ts_monit.conf #{args.monit_conf_dir}"
     sudo_if_needed args.sudo, "#{args.monit_bin} reload"
